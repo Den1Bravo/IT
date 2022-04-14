@@ -1,0 +1,40 @@
+1) Посмотреть где я --- pwd
+2) Создать папку --- mkdir freevadim
+3) Зайти в папку --- cd freevadim
+4) Создать 3 папки --- mkdir folder1 folder2 folder3
+5) Зайти в любоую папку --- cd folder1
+6) Создать 5 файлов (3 txt, 2 json) --- touch qa1.txt qa2.txt qa3.txt qa1.json qa2.json
+7) Создать 3 папки --- mkdir papka1 papka2 papka3
+8. Вывести список содержимого папки --- ls -la
+9) + Открыть любой txt файл --- cat qa1.txt
+10) + написать туда что-нибудь, любой текст. --- cat >> qa1.txt   (и текст) 
+11) + сохранить и выйти. --- жмем control + c
+12) Выйти из папки на уровень выше --- cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. --- mv papka1/qa1.txt papka2
+                                					     mv papka1/qa2.txt papka2
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. --- cp papka1/qa1.json papka2/qa1.json
+									     cp papka1/qa2.json papka2/qa2.json 
+15) Найти файл по имени --- find . -name qa1.json
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. --- grep papka2/123 qa1.txt
+17) вывести несколько первых строк из текстового файла --- head -n3 qa1.txt
+18) вывести несколько последних строк из текстового файла --- tail -n3 qa1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. --- less papka2/qa1.txt
+20) вывести дату и время --- date
+=========
+
+Задание *
+1) Отправить http запрос на сервер. --- curl http://162.55.220.72:5005/terminal-hw-request
+1.1. Curl "http://162.55.220.72:5005/get_method?name=Denys&age=25"
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 ---:
+
+#!/bin/bash
+mkdir freevadim
+cd freevadim
+mkdir folder1 folder2 folder3
+cd folder1
+touch qa1.txt qa2.txt qa3.txt qa1.json qa2.json
+mkdir papka1 papka2 papka3
+ls -la
+mv papka1/qa1.txt papka2
+
